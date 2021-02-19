@@ -23,7 +23,7 @@ app.set('views',path.join(__dirname,'/views'))
 app.use(express.urlencoded({extended:true}))
 //REQUESTS
 app.get('/TODO',(req,res) => {
-  res.send("HELLO");
+  res.render('todo');
 })
 app.get('/',async(req,res) => {
     const list = await todolist.find();
